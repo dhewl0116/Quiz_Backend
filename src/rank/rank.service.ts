@@ -1,7 +1,6 @@
 import { Injectable, Logger } from "@nestjs/common";
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { DevRankSchema, DesignRankSchema } from "./schema/rank.schema";
 import { RankEntityList, rank_entity } from "./entity/rank.entity";
 
 @Injectable()
