@@ -3,12 +3,9 @@ export type last = {
   name: string;
   score: number;
   same_name: number;
+  sec: number;
 };
 export type the_last = last[];
-
-export class duplication {
-  count: number;
-}
 
 class return_DTO {
   id: string;

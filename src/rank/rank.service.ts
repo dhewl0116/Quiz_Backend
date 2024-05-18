@@ -23,6 +23,7 @@ export class RankService {
         name: i.name,
         score: Math.round((i.score * (300 - i.sec)) / 100),
         same_name: i.same_name,
+        sec: i.sec,
       });
     }
 
@@ -31,7 +32,7 @@ export class RankService {
   async find_dev(): Promise<the_last> {
     this.logger.log("[GET] dev_Rank");
     return await this.make_new_array(
-      await await this.designRankModel.find().sort({ score: -1 }).exec()
+      await await this.devRankModel.find().sort({ score: -1 }).exec()
     );
   }
 

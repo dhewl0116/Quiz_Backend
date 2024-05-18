@@ -12,6 +12,7 @@ export class RankController {
   async findindev(@Response() response: Express.Response): Promise<any> {
     let data: the_last = await this.rankService.find_dev();
     data = data.sort((a, b) => b.score - a.score);
+    console.log(data);
     return response
       .status(200)
       .setHeader("Access-Control-Allow-Origin", "*")
